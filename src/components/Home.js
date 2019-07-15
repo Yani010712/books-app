@@ -5,9 +5,12 @@ import Form from './Form';
 import BookList from './BookList';
 
 class Home extends React.Component {
-  state = {
+  constructor(props) {
+    super(props);
+  this.state = {
     list: []
-  }
+  };
+}
 
   getBook = async (e) => {
    e.preventDefault();
