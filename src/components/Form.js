@@ -1,19 +1,12 @@
 import React from 'react';
-// import FormImage from '../books-image-for-form.jpg';
-//
-// var formStyle = {
-//   backgroundImage: `url(${FormImage})`
-// }
 
+//input-large search-query" to make input text field longer
 class Form extends React.Component {
 
    render() {
        return (
 
-         // <img src="https://cdn.aarp.net/content/dam/aarp/money/budgeting_savings/2016/04/1140-yeager-sell-your-used-books.imgcache.rev6feda141288df73e8fd100822bb375ea.jpg"
-         //class="img-fluid" alt="Responsive image">
-
-       <form onSubmit = {this.props.getBook} className="form-inline"> 
+       <form onSubmit = {this.props.getBook} className="form-inline">
          <div className="form-group mb-2 mr-2" >
           <input
             name="title"
