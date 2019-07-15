@@ -7,7 +7,7 @@ class Titles extends React.Component{
         return (
 
             <div>
-                <h1>Tome Tomb</h1>
+                <h1 className="text-center">Tome Tomb</h1>
             </div>
 
         )
