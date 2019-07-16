@@ -9,7 +9,7 @@ import FormImage from './books-image-for-form.jpg';
 
 var formStyle = {
   backgroundImage: `url(${FormImage})`
-  
+
 }
 
 // var mainStyle = {
@@ -19,11 +19,19 @@ var formStyle = {
 class App extends React.Component {
   render() {
     return (
+      <div class="container">
         <div className="app container" style={formStyle}>
+          <div>
             <Titles/>
             <Navigation />
-            <Main />
+          </div>
         </div>
+        <div class="row">
+          <div class="col-sm">
+            <Main />
+          </div>
+        </div>
+      </div>
 
     );
   }
