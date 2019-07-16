@@ -8,9 +8,10 @@ class BookList extends React.Component {
          <div>
            {this.props.list.map((book, index) => (
              <Book
-               key={index /* find unique props to use here */}
+               key={index}
                title={book.title}
                cover={book.cover}
+               author={book.author}
                readLink={book.readLink}
              />
            ))}
@@ -18,31 +19,8 @@ class BookList extends React.Component {
       );
    }
 }
-// BookList.defaultProps = {
-//   list: []
-// };
+BookList.defaultProps = {
+  list: []
+};
 
 export default BookList;
-
-
-
-// function BookList({ list }) {
-//   return (
-//     <div>
-//       {list.map(props => (
-//         <Book
-//           key={props.readLink /* find unique props to use here */}
-//           title={props.title}
-//           cover={props.cover}
-//           readLink={props.readLink}
-//         />
-//       ))}
-//     </div>
-//   );
-// }
-//
-// BookList.defaultProps = {
-//   list: []
-// };
-//
-// export default BookList;

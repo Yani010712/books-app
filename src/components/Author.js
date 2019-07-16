@@ -1,21 +1,19 @@
 import React from 'react';
 import axios from 'axios';
-
-import Form from './Form';
 import BookList from './BookList';
 
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-  this.state = {
-    list: []
-  };
-}
 
-  getBook = async (e) => {
-   e.preventDefault();
-    const book = e.target.elements.title.value;
-    axios.get(`https://openlibrary.org/search.json?title=${book}`)
+class Author extends React.Component {
+
+  state = {
+    author: '',
+    list  : []
+  }
+
+  componentDidMount = () => {
+    const author = this.props.location.state.author;
+
+    axios.get(`https://openlibrary.org/search.json?author=${author}`)
     .then(response => {
       const data = response.data;
       const docs = data.docs;
@@ -32,6 +30,7 @@ class Home extends React.Component {
       });
 
       this.setState({
+        author: this.props.location.state.author,
         list: list
       });
     })
@@ -45,22 +44,26 @@ class Home extends React.Component {
     .finally(function() {
       // always executed
     });
-   }
 
-    render() {
-      return (
-        <div>
-        <Form getBook={this.getBook} />
-        {this.state.list.length !== 0 ? (
-          <div>
-            <BookList list={this.state.list} />
-          </div>
-        ) : (
-          <div>No results</div>
-        )}
-        </div>
-      );
-    }
+
   }
 
-  export default Home;
+  render(){
+    return(
+      <div className="app container">
+          {this.state.list.length !== 0 ? (
+            <div>
+              <h1>{this.state.author}</h1>
+              <BookList list={this.state.list} />
+            </div>
+          ) : (
+            <div></div>
+          )}
+      </div>
+    );
+  }
+}
+
+
+
+export default Author;

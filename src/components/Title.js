@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class Titles extends React.Component{
+class Title extends React.Component{
 
     render () {
         return (
@@ -14,4 +14,4 @@ class Titles extends React.Component{
     }
 }
 
-export default Titles;
+export default Title;
