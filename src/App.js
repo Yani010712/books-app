@@ -36,6 +36,7 @@ componentDidUpdate = () => {
     .then(response => {
       const data = response.data;
       const docs = data.docs;
+      console.log(data.docs);
 
       const list = docs.map(item => {
         return {
