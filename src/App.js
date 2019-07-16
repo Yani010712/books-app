@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import Form from './components/Form';
 import BookList from './components/BookList';
+import Title from './components/Title';
 
 
 
@@ -69,6 +70,7 @@ componentDidUpdate = () => {
     return (
 
         <div className="app container">
+            <Title/>
             <Form getBook={this.getBooks} />
             {this.state.list.length !== 0 ? (
               <div>
