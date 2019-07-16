@@ -20,18 +20,23 @@ class App extends React.Component {
   render() {
     return (
       <div class="container">
+
         <div className="app container" style={formStyle}>
           <div>
             <Titles/>
             <Navigation />
           </div>
         </div>
+
         <br></br>
-        <div class="row">
-          <div class="col-sm">
+
+        <div class="container">
+          <div className="app container">
             <Main />
           </div>
         </div>
+
+
       </div>
 
     );
