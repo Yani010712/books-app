@@ -8,11 +8,67 @@ h1 {
   margin-bottom: 15px;
 }
 
-.book {
+/* .book {
   border: 1px solid #ccc;
   width: 200px;
   display: inline-block;
+} */
+
+.author-link:active {
+  color: #800000;
 }
+
+.author-link:hover {
+  color: #C70039;
+  text-decoration: none;
+
+}
+
+.author-link {
+  font-size: 110%;
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+}
+
+.btn {
+  background-color:  #FFC300;
+  border: 2px solid #FFC300;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  font-size: 120%;
+}
+
+.btn:hover {
+  background-color: #FF5733 ;
+  color: white;
+  border: 2px solid #FF5733;
+}
+
+.card-title {
+  font-size: 170%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+}
+
+
+
+
+
+
+
 
 html {
       box-sizing: border-box;
