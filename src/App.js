@@ -26,6 +26,7 @@ class App extends React.Component {
             <Navigation />
           </div>
         </div>
+        <br></br>
         <div class="row">
           <div class="col-sm">
             <Main />
