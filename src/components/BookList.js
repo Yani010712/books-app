@@ -5,7 +5,7 @@ class BookList extends React.Component {
 
    render() {
        return (
-         <div>
+         <div> //class="p-3 mb-2 bg-white
            {this.props.list.map((book, index) => (
              <Book
                key={index /* find unique props to use here */}

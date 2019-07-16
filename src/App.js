@@ -9,7 +9,12 @@ import FormImage from './books-image-for-form.jpg';
 
 var formStyle = {
   backgroundImage: `url(${FormImage})`
+  
 }
+
+// var mainStyle = {
+//   backgroundColor: white
+// }
 
 class App extends React.Component {
   render() {
@@ -19,6 +24,7 @@ class App extends React.Component {
             <Navigation />
             <Main />
         </div>
+
     );
   }
 }

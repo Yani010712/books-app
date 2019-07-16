@@ -1,6 +1,9 @@
 .app {
   border: 1px solid #eee;
   padding: 15px;
+  background-repeat: no-repeat;
+  /*background-size: auto;*/
+  background-size: 100% 8.5%;
 }
 
 /* h1 {
