@@ -1,10 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import App from '../App';
 import BookList from './BookList';
-
-// added
-
-
+import { Link } from 'react-router-dom'
 
 class Author extends React.Component {
 
@@ -56,7 +54,13 @@ class Author extends React.Component {
       <div className="app container">
           {this.state.list.length !== 0 ? (
             <div>
-              <h1>{this.state.author}</h1>
+              <Link  className="btn btn-info card-text1" to="/">Back</Link>
+              <br></br>
+              <br></br>
+              <br></br>
+              <h1 className="author-name-list">{this.state.author}</h1>
+              <br></br>
+              <br></br>
               <BookList list={this.state.list} />
             </div>
           ) : (

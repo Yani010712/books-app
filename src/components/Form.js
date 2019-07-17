@@ -8,7 +8,7 @@ class Form extends React.Component {
 
        <form onSubmit = {this.props.getBook} className="form-inline">
          <div className="box form-group mb-2 mr-2" >
-          <input
+          <input 
             name="title"
             type="text"
             id="search"
