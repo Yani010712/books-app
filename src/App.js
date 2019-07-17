@@ -17,7 +17,7 @@ class App extends React.Component {
 }
 
 componentDidMount = () => {
-  const json = localStorage.getItem("list");
+  const json = sessionStorage.getItem("list");
   const list = JSON.parse(json);
   if (list) {
     this.setState({ list: list })
@@ -26,7 +26,7 @@ componentDidMount = () => {
 
 componentDidUpdate = () => {
   const list = JSON.stringify(this.state.list)
-  localStorage.setItem("list", list)
+  sessionStorage.setItem("list", list)
 }
 
   getBooks = async (e) => {

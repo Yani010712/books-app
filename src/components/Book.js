@@ -25,8 +25,9 @@ class Book extends React.Component {
 }
 
 Book.defaultProps = {
-  cover: "https://www.jainsusa.com/images/store/agriculture/not-available.jpg",
+  cover: "https://cdn.nexternal.com/clay2/images/21-W-Skyline-1801.jpg",
   readLink: "#"
 };
+
 
 export default Book;
