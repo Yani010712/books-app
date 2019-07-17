@@ -33,7 +33,7 @@ h1 {
 
 .card-img-top {
   height: 200px;
-  width: 100%;
+  width: 237.5px;
 }
 
 .btn {
@@ -65,3 +65,12 @@ h1 {
   grid-column-gap: 50px;
   grid-row-gap: 50px;
 }
+
+/* .bar {
+  width: 100%;
+} */
+
+/* #search {
+  margin: 0 auto;
+    display: inline-block;
+} */

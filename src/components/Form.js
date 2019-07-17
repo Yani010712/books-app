@@ -7,10 +7,11 @@ class Form extends React.Component {
        return (
 
        <form onSubmit = {this.props.getBook} className="form-inline">
-         <div className="form-group mb-2 mr-2" >
+         <div className="box form-group mb-2 mr-2" >
           <input
             name="title"
             type="text"
+            id="search"
             className="form-control"
             autoComplete="off"
             placeholder="Type text to search books"

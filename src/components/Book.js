@@ -9,7 +9,7 @@ class Book extends React.Component {
       <div className="image-container">
         <img className="card-img-top" src={this.props.cover} alt={this.props.title}/>
         <div className="card-body">
-            <h5 className="card-title">{this.props.title.length < 20 ? `${this.props.title}` : `${this.props.title.substring(0, 20)}...`}</h5>
+            <h5 className="card-title">{this.props.title.length < 11 ? `${this.props.title}` : `${this.props.title.substring(0, 11)}...`}</h5>
             <Link className="card-text author-link" to={{
                 pathname: `/author/${this.props.author}`,
                 state: {
