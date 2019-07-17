@@ -5,44 +5,29 @@ class BookList extends React.Component {
 
    render() {
        return (
-         <div> //class="p-3 mb-2 bg-white
-           {this.props.list.map((book, index) => (
-             <Book
-               key={index /* find unique props to use here */}
-               title={book.title}
-               cover={book.cover}
-               readLink={book.readLink}
-             />
-           ))}
-         </ div>
+         <div className="grid-container">
+           <div>
+             <div className="row">
+               {this.props.list.map((book, index) => (
+                 <div key={index} className="card col-lg-3 col-6 col-md-5 offset-lg-0 offset-md-1 offset-3 book-list-info">
+                 <Book
+                   title={book.title}
+                   cover={book.cover}
+                   author={book.author}
+                   readLink={book.readLink}
+                   showAuthor={this.props.showAuthor}
+                 />
+                </div>
+               ))}
+             </div>
+           </div>
+         </div>
       );
    }
 }
-// BookList.defaultProps = {
-//   list: []
-// };
+BookList.defaultProps = {
+  list: [],
+  showAuthor: false
+};
 
 export default BookList;
-
-
-
-// function BookList({ list }) {
-//   return (
-//     <div>
-//       {list.map(props => (
-//         <Book
-//           key={props.readLink /* find unique props to use here */}
-//           title={props.title}
-//           cover={props.cover}
-//           readLink={props.readLink}
-//         />
-//       ))}
-//     </div>
-//   );
-// }
-//
-// BookList.defaultProps = {
-//   list: []
-// };
-//
-// export default BookList;
