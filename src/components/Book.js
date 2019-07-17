@@ -19,7 +19,7 @@ class Book extends React.Component {
               {
                 this.props.author ?
                   (this.props.author[0].length < 18 ? this.props.author[0] : `${this.props.author[0].substring(0, 18)}...` )
-                  : "Unknown"
+                  : (this.props.showAuthor ? 'Unknown' : '')
               }
             </Link>
             <br></br>
@@ -35,8 +35,10 @@ class Book extends React.Component {
 }
 
 Book.defaultProps = {
-  cover: "https://www.jainsusa.com/images/store/agriculture/not-available.jpg",
-  readLink: "#"
+  cover: "https://cdn.nexternal.com/clay2/images/21-W-Skyline-1801.jpg",
+  readLink: "#",
+  showAuthor: false
 };
+
 
 export default Book;

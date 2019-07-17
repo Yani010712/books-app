@@ -15,6 +15,7 @@ class BookList extends React.Component {
                    cover={book.cover}
                    author={book.author}
                    readLink={book.readLink}
+                   showAuthor={this.props.showAuthor}
                  />
                 </div>
                ))}
@@ -25,7 +26,8 @@ class BookList extends React.Component {
    }
 }
 BookList.defaultProps = {
-  list: []
+  list: [],
+  showAuthor: false
 };
 
 export default BookList;
