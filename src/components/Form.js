@@ -2,10 +2,8 @@ import React from 'react';
 
 //input-large search-query" to make input text field longer
 class Form extends React.Component {
-
    render() {
        return (
-
        <form onSubmit = {this.props.getBook} className="form-inline">
          <div className="box form-group mb-2 mr-2" >
           <input 
@@ -21,11 +19,8 @@ class Form extends React.Component {
            Search
         </button>
        </form>
-
-        );
-
-   }
-
+      );
+  }
 }
 
 export default Form;
