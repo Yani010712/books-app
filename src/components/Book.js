@@ -40,5 +40,4 @@ Book.defaultProps = {
   showAuthor: false
 };
 
-
 export default Book;

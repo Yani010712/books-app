@@ -64,6 +64,4 @@ class Author extends React.Component {
   }
 }
 
-
-
 export default Author;
